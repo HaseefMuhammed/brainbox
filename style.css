@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+/* Dark Mode Background */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar h3 {
+  color: #fff;
+}
+
+/* Main Content */
+#main-content {
+  margin-left: 270px;
+  padding-top: 50px;
+}
+
+/* Card for Dashboard */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #2196F3;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #1976D2;
+}
+
+/* Sidebar Links */
+.nav-link {
+  color: #bbb;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+/* Video Player */
+#videoFrame {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Page Transitions */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.icon{
+  width: 2em;
+}
+.its{
+  font-size: 3em;
+  color: white;
+  font-family: "Rubik Wet Paint", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.wlcm{
+  color: rgb(168, 10, 10);
+  font-weight: bolder;
+  font-size: 2em;
+  text-transform: capitalize;
+}
+body{
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#videoFrame{
+  border: 2px solid white;
+}
+.haz{
+  font-weight: bolder;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-left a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+  color: #00aaff;
+}
+.footer-center{
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+.till-wtch{
+  font-weight: bolder;
+  font-size: 1.2em;
+  color: rgb(246, 255, 0);
+}

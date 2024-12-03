@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAIN BOX</title>
+    <link rel="icon" href="images/2-removebg-preview (1).png" type="image/logo">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        /* Custom Styles */
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar .nav-link {
+            color: #f0f0f0;
+        }
+
+        .navbar .nav-link:hover {
+            color: #f0f0f0;
+            background-color: #495057;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #f0f0f0;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        /* Center the content */
+        #main-content {
+            margin: 50px auto;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="icon" src="images/2-removebg-preview (1).png" alt=""> BRAIN BOX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="showDashboard()">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showVideoForm()">Watch Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <div class="text-center p-5">
+            <h1 class="mb-4 its">IT'S YOUR BRAIN BOX</h1>
+
+            <!-- Dashboard Section -->
+            <div id="dashboard" class="d-none">
+                <h3 class="wlcm">Hello, <span id="studentName"></span>!</h3>
+                <div class="card text-white bg-dark mb-3 card-mar">
+                    <div class="card-body mt-3">
+                        <h5 class="card-title">Your Learning Progress</h5>
+                        <p class="card-text till-wtch">Videos Watched Till the End: <span id="videosWatched">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Form Section -->
+            <div id="videoForm" class="d-none">
+                <p class="text-light">Please paste the YouTube video link below:</p>
+                <input type="text" id="videoLink" class="form-control mb-3" placeholder="https://youtu.be/AzwQc-w7kUw">
+                <button class="btn btn-primary" onclick="startVideo()">Watch Video</button>
+            </div>
+
+            <!-- Video Player Section -->
+            <div id="videoPlayer" class="d-none">
+                <iframe id="videoFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                <p class="text-danger haz mt-3">You cannot close this tab until you finish the video!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <a href="http://www.webcraaft.42web.io" target="_blank" class="footer-left">Powered by Web Craft</a>
+        <div class="footer-center">Brain Box</div>
+        <div class="footer-right" id="time-display"></div>
+    </footer>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
