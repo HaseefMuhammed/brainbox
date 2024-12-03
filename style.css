@@ -150,3 +150,58 @@ body{
   font-size: 1.2em;
   color: rgb(246, 255, 0);
 }
+.card-mar{
+  position: relative;
+  border: 2px solid transparent; /* Placeholder for the border */
+  border-radius: 10px;
+  background: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid white;
+}
+.card-ctn{
+  z-index: 1;
+  position: relative;
+  font-size: 1.2rem;
+
+  align-items: center;
+  gap: 10px;
+}
+.card-mar::before{
+  content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background: linear-gradient(
+        to right,
+        rgba(255, 0, 0, 0.5),
+        rgba(255, 0, 81, 0.2),
+        rgba(255, 0, 0, 0.5)
+    );
+    width: 200%; /* Ensure full animation coverage */
+    height: 200%; /* Ensure full animation coverage */
+    animation: slideBorder 3s linear infinite;
+    z-index: 0;
+}
+
+/* Keyframes for sliding border effect */
+@keyframes slideBorder {
+    0% {
+        transform: translate(-100%, -100%);
+    }
+    25% {
+        transform: translate(0, -100%);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    75% {
+        transform: translate(-100%, 0);
+    }
+    100% {
+        transform: translate(-100%, -100%);
+    }
+}
